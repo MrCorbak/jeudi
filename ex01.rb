@@ -6,13 +6,15 @@ j = 0
 puts "#{journalist.size}"
  journalist_num = journalist.grep /[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]/
 #* puts "#{journalist.size(journalist.grep /[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]/}"
+ puts "#{journalist_num.size}"
+ 
 #*  puts "#{journalist.each.scan(/aude/)}" 
 journa_clone = journalist
 t = 0
 
 journa_clone.each do |i|
 	i = i.downcase
-	if i.grep /'aude'/
+	if i.include? 'aude'
 			t = t + 1
 	end
 end
